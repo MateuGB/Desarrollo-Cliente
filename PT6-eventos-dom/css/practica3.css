@@ -1,0 +1,28 @@
+/* CSS que da el enunciado de la práctica 3 */
+div {
+  border: 1px solid black;
+  padding: 1em;
+  position: fixed;
+  top: 20px;
+  width: 200px;
+  height: 100px;
+}
+
+#capa1 {
+  left: 50px;
+}
+
+#capa2 {
+  left: 400px;
+}
+
+/* Añadido: fondo blanco del destino y enlace para volver debajo de las capas */
+#capa2 {
+  background-color: white;
+}
+
+.volver {
+  position: fixed;
+  top: 160px;
+  left: 50px;
+}

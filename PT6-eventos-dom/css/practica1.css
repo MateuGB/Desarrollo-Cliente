@@ -1,0 +1,28 @@
+/* Estilos que da el enunciado de la práctica 1 */
+#imagen {
+  background-color: black;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+/* Enlace para volver, por encima de la capa negra */
+.volver {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  color: white;
+  font-family: system-ui, Arial, sans-serif;
+}

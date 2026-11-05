@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica 2</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <h1>Práctica 2</h1>
+  <div class="enunciado">
+    <p>Formulario con email y password. Se validan al perder el foco (<code>blur</code>) y si no son correctos se muestra un mensaje con el formato esperado. El mensaje se quita al volver a entrar en el campo. El botón de enviar está en gris y no funciona hasta que los dos campos son correctos.</p>
+  </div>
+
+  <h2>Formulario</h2>
+  <form id="formulario">
+    <p>
+      <label for="email">Email:</label><br>
+      <input type="text" id="email" name="email">
+      <span id="errorEmail" class="error"></span>
+    </p>
+    <p>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password">
+      <span id="errorPassword" class="error"></span>
+    </p>
+    <button type="submit" id="btnEnviar" disabled>Enviar</button>
+  </form>
+  <p id="mensaje"></p>
+
+  <a class="volver" href="../index.html">&larr; Volver al índice</a>
+  <script src="../js/practica2.js"></script>
+</body>
+</html>
