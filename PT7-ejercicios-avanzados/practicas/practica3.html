@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctica 3</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <h1>Práctica 3 (opcional)</h1>
+  <div class="enunciado">
+    <p>Módulo <code>temporizador.js</code> con dos funciones: <code>temporizador</code> (la de la práctica 2) y <code>cuenta</code> (función <code>async</code> que escribe una cuenta atrás en un elemento HTML). El programa principal está en esta página: crea dos párrafos, en el primero cuenta desde 6 de segundo en segundo y en el segundo desde 60 de décima en décima. Al llegar a cero, en el segundo se escribe "Fin".</p>
+  </div>
+
+  <h2>Resultado</h2>
+  <div id="resultado"></div>
+
+  <a class="volver" href="../index.html">&larr; Volver al índice</a>
+
+  <!-- El programa principal va aquí, dentro de la página, como pide el enunciado.
+       type="module" es obligatorio para poder usar import -->
+  <script type="module">
+    import { cuenta } from "../js/temporizador.js";
+
+    const resultado = document.getElementById("resultado");
+
+    // Creamos los dos párrafos y los añadimos a la página
+    const parrafo1 = document.createElement("p");
+    const parrafo2 = document.createElement("p");
+    resultado.appendChild(parrafo1);
+    resultado.appendChild(parrafo2);
+
+    // Primer párrafo: desde 6, de segundo en segundo
+    // (el intervalo no se indica, así que vale 1 segundo por defecto)
+    cuenta(6, parrafo1);
+
+    // Segundo párrafo: desde 60, de décima en décima (100 ms).
+    // Al terminar, el callback escribe "Fin"
+    cuenta(60, parrafo2, 100, function () {
+      parrafo2.textContent = "Fin";
+    });
+  </script>
+</body>
+</html>

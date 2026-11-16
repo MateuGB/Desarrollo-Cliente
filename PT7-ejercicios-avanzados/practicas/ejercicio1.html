@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 1</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+  <h1>Ejercicio 1</h1>
+  <div class="enunciado">
+    <p>El usuario escribe su nombre y al pulsar "Guardar" se guarda en una cookie que dura 7 días. Al cargar la página, si la cookie ya existe, se muestra un mensaje de bienvenida en lugar del campo de texto.</p>
+  </div>
+
+  <h2>Resultado</h2>
+
+  <!-- Se ve cuando todavía no hay cookie -->
+  <div id="formulario">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre">
+    <button id="btnGuardar">Guardar</button>
+    <span id="error" class="error"></span>
+  </div>
+
+  <!-- Se ve cuando la cookie ya existe -->
+  <div id="bienvenida" hidden>
+    <p id="mensaje"></p>
+    <button id="btnBorrar">Borrar cookie</button>
+  </div>
+
+  <a class="volver" href="../index.html">&larr; Volver al índice</a>
+  <script src="../js/cookies.js"></script>
+  <script src="../js/ejercicio1.js"></script>
+</body>
+</html>
